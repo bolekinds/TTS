@@ -47,7 +47,8 @@ html {
 }
 
 .button-3:disabled {
-  background-color: #94d3a2;
+  background-color: #5f6460;
+  cursor: not-allowed;
   border-color: rgba(27, 31, 35, .1);
   color: rgba(255, 255, 255, .8);
   cursor: default;
