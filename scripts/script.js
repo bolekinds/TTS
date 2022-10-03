@@ -37,11 +37,13 @@ btnSpeak.addEventListener('click', function() {
         xhr.setRequestHeader("Access-Control-Allow-Origin", "*")
         xhr.onload = function() {
             btnSpeak.innerText = "Reading..."
+            btnSpeak.disabled = true;
             latestMP3 = JSON.parse(xhr.responseText).MP3
             let audio = new Audio(JSON.parse(xhr.responseText).URL);
             audio.play();
             audio.addEventListener('ended', function() {
                 btnSpeak.innerText = "Read!"
+                btnSpeak.disabled = false;
                 deb = false
             })
         }
